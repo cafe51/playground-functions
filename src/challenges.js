@@ -75,42 +75,6 @@ function highestCount(barray) {
   return counter;
 }
 
-// bindex + 1 !== barray.length
-
-// let arrayContador = [];
-// let counterrr = 0;
-// arrayContador.length = barray.length;
-// for (let indx = 0; indx < barray.length; indx += 1) {
-//   for (let indx2 = 0; indx2 < barray.length; indx2 += 1) {
-//     if (barray[indx] === barray[indx2]) {
-//       counterrr += 1;
-//     }
-//   }
-//   arrayContador[indx] = counterrr;
-//   counterrr = 0;
-// }
-// return arrayContador[0];
-// }
-
-// function bobblersort(barray) {
-//   for (let bindex2 = 1; bindex2 < barray.length; bindex2 += 1) {
-//     for (let secondbIndex = 0; secondbIndex < bindex2; secondbIndex += 1) {
-//       if (barray[bindex2] > barray[secondbIndex]) {
-//         let position = barray[bindex2];
-//         barray[bindex2] = barray[secondbIndex];
-//         barray[secondbIndex] = position;
-//       }
-//     }
-//   }
-//   return barray;
-// }
-
-
-
-
-
-
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
