@@ -38,9 +38,6 @@ function concatName(arrayLista) {
   stringR = stringR.concat(arrayLista[0]);
   return stringR;
 }
-let exemplo = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-
-console.log(concatName(exemplo));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -52,7 +49,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function maiorFinder(barray) {
-  let maior = 0;
+  let maior = barray[0];
   for (let bindex = 0; bindex < barray.length; bindex += 1) {
     if (barray[bindex] >= barray[bindex + 1] && barray[bindex] >= maior) {
       maior = barray[bindex];
