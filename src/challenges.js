@@ -12,9 +12,24 @@ function calcArea(base, height) {
   return divisao;
 }
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let arrayR = [];
+  let string2 = '';
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] !== ' ' && i !== string.length - 1) {
+      string2 = string2.concat(string[i]);
+    } else {
+      arrayR.push(string2);
+      string2 = '';
+    }
+  }
+  arrayR[arrayR.length - 1] = arrayR[arrayR.length - 1].concat(string[string.length - 1]);
+
+  return arrayR;
 }
+
+console.log(splitSentence('olá amigo'));
 
 // Desafio 4
 function concatName() {
