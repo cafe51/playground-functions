@@ -32,7 +32,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayLista) {
   // seu código aqui
-  let stringR = '';.
+  let stringR = '';
   stringR = stringR.concat(arrayLista[arrayLista.length - 1]);
   stringR = stringR.concat(', ');
   stringR = stringR.concat(arrayLista[0]);
@@ -51,38 +51,31 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function maiorFinder(barray) {
+  let maior = 0;
+  for (let bindex = 0; bindex < barray.length; bindex += 1) {
+    if (barray[bindex] >= barray[bindex + 1] && barray[bindex] >= maior) {
+      maior = barray[bindex];
+    } else if (barray[bindex + 1] > maior) {
+      maior = barray[bindex + 1];
+    }
+  }
+  return maior;
+}
 
 function highestCount(barray) {
   // seu código aqui{
-      for (let bindex2 = 1; bindex2 < barray.length; bindex2 += 1) {
-        for (let secondbIndex = 0; secondbIndex < bindex2; secondbIndex += 1) {
-          if (barray[bindex2] > barray[secondbIndex]) {
-            let position = barray[bindex2];
-            barray[bindex2] = barray[secondbIndex];
-            barray[secondbIndex] = position;
-      }
+  let counter = 0;
+  let maior = maiorFinder(barray);
+  for (let bindex = 0; bindex < barray.length; bindex += 1) {
+    if (maior === barray[bindex]) {
+      counter += 1;
     }
   }
-  let arrayContador = [];
-  let counterrr = 0;
-  arrayContador.length = barray.length;
-  for (let indx = 0; indx < barray.length; indx += 1) {
-    for (let indx2 = 0; indx2 < barray.length; indx2 += 1) {
-      if (barray[indx] === barray[indx2]) {
-        counterrr += 1;
-      }
-    }
-    arrayContador[indx] = counterrr;
-    counterrr = 0;
-  }
-  return arrayContador[0];
+  return counter;
 }
 
-let x = [0, 4, 4, 4, 9, 2, 1];
-
-console.log(highestCount(x));
-
-
+// bindex + 1 !== barray.length
 
 // let arrayContador = [];
 // let counterrr = 0;
@@ -97,7 +90,7 @@ console.log(highestCount(x));
 //   counterrr = 0;
 // }
 // return arrayContador[0];
-
+// }
 
 // function bobblersort(barray) {
 //   for (let bindex2 = 1; bindex2 < barray.length; bindex2 += 1) {
