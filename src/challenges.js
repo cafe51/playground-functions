@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  return a > b && a > 10;
+  return a && b;
 }
 
 // Desafio 2
