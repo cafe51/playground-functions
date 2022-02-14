@@ -3,12 +3,14 @@ function compareTrue(a, b) {
   // seu código aqui
   return a > b && a > 10;
 }
-console.log(compareTrue(2, 3));
-// Desafio 2
-function calcArea() {
-  // seu código aqui
-}
 
+// Desafio 2
+function calcArea(base, height) {
+  // seu código aqui
+  let multiplicacao = base * height;
+  let divisao = multiplicacao / 2;
+  return divisao;
+}
 // Desafio 3
 function splitSentence() {
   // seu código aqui
