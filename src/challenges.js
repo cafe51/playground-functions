@@ -155,9 +155,29 @@ function decode(word) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let techOrdenado = tech.sort();
+  let arrayLista = [];
+  let name1 = name;
+  let objeto;
+  if (tech.length !== 0) {
+    for (let index = 0; index < tech.length; index += 1) {
+      objeto = {
+        tech: techOrdenado[index],
+        name: name1,
+      };
+      arrayLista[index] = objeto;
+    }
+  } else return 'Vazio!';
+  return arrayLista;
 }
+let ar = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+console.log(techList(ar, 'Lucas'));
+
+// let coisa;
+// coisa.a = 'olá';
+// console.log(coisa);
 
 module.exports = {
   calcArea,
