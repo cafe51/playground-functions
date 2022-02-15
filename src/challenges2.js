@@ -59,14 +59,40 @@ function generatePhoneNumber(number) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let resposta = false;
+  if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineB + lineA)) {
+    resposta = true;
+  }
+  return resposta;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function mensagem(num2) {
+  let msg = '';
+  if (num2 > 1) {
+    msg = `${num2} copos de água`;
+  } else msg = `${num2} copo de água`;
+  return msg;
 }
+
+function hydrate(string) {
+  let num2 = 0;
+  let num;
+  for (let i = 0; i < string.length; i += 1) {
+    for (let i2 = 1; i2 <= 9; i2 += 1) {
+      if (string[i] == i2) {
+        num = string[i];
+        num = parseInt(num, 10);
+        num2 += num;
+      }
+    }
+  }
+  return mensagem(num2);
+}
+
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
