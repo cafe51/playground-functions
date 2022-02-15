@@ -175,10 +175,6 @@ function techList(tech, name) {
 let ar = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 console.log(techList(ar, 'Lucas'));
 
-// let coisa;
-// coisa.a = 'olá';
-// console.log(coisa);
-
 module.exports = {
   calcArea,
   catAndMouse,
