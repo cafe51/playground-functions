@@ -87,20 +87,50 @@ function catAndMouse(mouse, cat1, cat2) {
   return resposta;
 }
 
-// console.log(catAndMouse(3, 1, 2));
-
-// //cat2
-// console.log(catAndMouse(0, 3, 2));
-
-// // gatos trombam
-// console.log(catAndMouse(3, 1, 2));
-
-// //cat1
-// console.log(catAndMouse(10, 4, 22));
-
 // Desafio 8
-function fizzBuzz() {
+function bugFiller(carray) {
+  let arrayFb = [];
+  for (let cindex = 0; cindex < carray.length; cindex += 1) {
+    if (carray[cindex] % 5 !== 0 && carray[cindex] % 3 !== 0) {
+      arrayFb[cindex] = 'bug!';
+    } else arrayFb[cindex] = carray[cindex];
+  }
+  return arrayFb;
+}
+function fizzBuzzFiller(carray) {
+  let arrayFb = [];
+  for (let cindex = 0; cindex < carray.length; cindex += 1) {
+    if (carray[cindex] % 5 === 0 && carray[cindex] % 3 === 0) {
+      arrayFb[cindex] = 'fizzBuzz';
+    } else arrayFb[cindex] = carray[cindex];
+  }
+  return arrayFb;
+}
+function fizzFiller(carray) {
+  let arrayFb = [];
+  for (let cindex = 0; cindex < carray.length; cindex += 1) {
+    if (carray[cindex] % 5 !== 0 && carray[cindex] % 3 === 0) {
+      arrayFb[cindex] = 'fizz';
+    } else arrayFb[cindex] = carray[cindex];
+  }
+  return arrayFb;
+}
+function buzzFiller(carray) {
+  let arrayFb = [];
+  for (let cindex = 0; cindex < carray.length; cindex += 1) {
+    if (carray[cindex] % 5 === 0 && carray[cindex] % 3 !== 0) {
+      arrayFb[cindex] = 'buzz';
+    } else arrayFb[cindex] = carray[cindex];
+  }
+  return arrayFb;
+}
+function fizzBuzz(carray) {
   // seu código aqui
+  let bf1 = bugFiller(carray);
+  let bf2 = fizzBuzzFiller(bf1);
+  let bf3 = fizzFiller(bf2);
+  let bf4 = buzzFiller(bf3);
+  return bf4;
 }
 
 // Desafio 9
