@@ -7,6 +7,7 @@ function zerouOuNove(number) {
   return 'tudo ok';
 }
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function repetidos(number) {
   let resposta = 'tudo ok';
   let counter = 0;
@@ -77,11 +78,13 @@ function mensagem(num2) {
   return msg;
 }
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function hydrate(string) {
   let num2 = 0;
   let num;
   for (let i = 0; i < string.length; i += 1) {
     for (let i2 = 1; i2 <= 9; i2 += 1) {
+      // eslint-disable-next-line eqeqeq
       if (string[i] == i2) {
         num = string[i];
         num = parseInt(num, 10);
@@ -91,8 +94,6 @@ function hydrate(string) {
   }
   return mensagem(num2);
 }
-
-console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
