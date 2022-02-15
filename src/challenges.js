@@ -134,11 +134,24 @@ function fizzBuzz(carray) {
 }
 
 // Desafio 9
-function encode() {
+function encode(word) {
   // seu código aqui
+  word = word.replace(/a/g, '1');
+  word = word.replace(/e/g, '2');
+  word = word.replace(/i/g, '3');
+  word = word.replace(/o/g, '4');
+  word = word.replace(/u/g, '5');
+  return word;
 }
-function decode() {
+
+function decode(word) {
   // seu código aqui
+  word = word.replace(/1/g, 'a');
+  word = word.replace(/2/g, 'e');
+  word = word.replace(/3/g, 'i');
+  word = word.replace(/4/g, 'o');
+  word = word.replace(/5/g, 'u');
+  return word;
 }
 
 // Desafio 10
